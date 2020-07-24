@@ -1,8 +1,8 @@
-# Konvoy training
+# Managing Kubernetes at Scale
 
 ## Introduction
 
-During this training, you'll learn how to deploy Konvoy and to use its main features:
+During this workshop, you will learn through the use of customer resource definitions, controllers and APIs how to manage and operate Kubernetes at scale.
 
 * [Introduction](#introduction)
 * [Prerequisites](#prerequisites)
