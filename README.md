@@ -8,8 +8,8 @@ During this workshop, you will learn through the use of customer resource defini
 * [Prerequisites](#prerequisites)
 * [1. Multi-cloud](#1-Multi-cloud-lab)
 * [2. Multi-cluster)](#2-Multi-cluster)
-* [3. Multitenancyt](#3-Multitenancy)
-
+* [3. Multitenancy](#3-Multitenancy)
+* [4. Summary](#4-Summary)
 
 ## Prerequisites
 
