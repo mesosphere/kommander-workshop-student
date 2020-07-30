@@ -67,7 +67,7 @@ To create a cluster you need to setup the secret with the AWS credentials and a 
 Secret:
 ```yaml
 {
-	kind: Secret
+kind: Secret
 apiVersion: v1
 metadata:
   name: aws-credentials
