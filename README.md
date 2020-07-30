@@ -65,8 +65,9 @@ NOTE: Assuming you logged in with aws-cli
 To create a cluster you need to setup the secret with the AWS credentials and a CloudProviderAccount.
 
 Secret:
-```
-kind: Secret
+```yaml
+{
+	kind: Secret
 apiVersion: v1
 metadata:
   name: aws-credentials
@@ -77,6 +78,7 @@ data:
   profile: Mzk4MDUzNDUxNzgyX01lc29zcGhlcmUtUG93ZXJVc2VyCg==
   type: YXdz
 type: kommander.mesosphere.io/aws-credentials
+}
 ```
 We will apply the secret which will be stored in the namespace of the workspace.
 
