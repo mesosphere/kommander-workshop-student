@@ -79,9 +79,9 @@ data:
 type: kommander.mesosphere.io/aws-credentials
 ```
 We will apply the secret which will be stored in the namespace of the workspace.
-```
-kubectl apply -f student###-aws-secret.yaml
-```
+
+`kubectl apply -f student###-aws-secret.yaml`
+
 
 CloudProviderAccount:
 ```
