@@ -84,7 +84,7 @@ We will apply the secret which will be stored in the namespace of the workspace.
 
 
 CloudProviderAccount:
-```
+```yaml
 apiVersion: kommander.mesosphere.io/v1beta1
 kind: CloudProviderAccount
 metadata:
@@ -98,8 +98,9 @@ spec:
     name: aws-credentials
 ```
 We will apply the CloudProviderAccount which will be stored in the namespace of the workspace.
-```
-kubectl apply -f student###-cloudprovideraccount.yaml
-```
+
+`kubectl apply -f student###-cloudprovideraccount.yaml`
+
+
 
 
