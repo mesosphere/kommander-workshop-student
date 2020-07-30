@@ -1,0 +1,8 @@
+apiVersion: kommander.mesosphere.io/v1beta1
+kind: CloudProviderAccount
+metadata:
+  name: aws-credentials
+spec:
+  provider: aws
+  credentialsRef:
+    name: aws-credentials

@@ -1,0 +1,13 @@
+apiVersion: kommander.mesosphere.io/v1beta1
+kind: KonvoyCluster
+metadata:
+  name: student001
+  namespace: student001-#####-#####
+spec:
+  cluster:
+    kubernetes:
+      version: 1.17.8
+  provisioner:
+    provider: aws
+  cloudProviderAccountRef:
+    name: aws-credentials
