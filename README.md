@@ -70,6 +70,7 @@ kind: Secret
 apiVersion: v1
 metadata:
   name: aws-credentials
+  namespace: student###-#####-#####
 data:
   config: >-
     W2RlZmF1bHRdCnJlZ2lvbiA9IHVzLWVhc3QtMQpvdXRwdXQgPSBqc29uCgpbcHJvZmlsZSAxMTA0NjU2NTc3NDFfTWVzb3NwaGVyZS1Qb3dlclVzZXJdCnJvbGVfYXJuID0gYXJuOmF3czppYW06OjM5ODA1MzQ1MTc4Mjpyb2xlL2tvbW1hbmRlci1kZXBsb3llcgpjcmVkZW50aWFsX3NvdXJjZSA9IEVjMkluc3RhbmNlTWV0YWRhdGEK
@@ -77,15 +78,28 @@ data:
   type: YXdz
 type: kommander.mesosphere.io/aws-credentials
 ```
+We will apply the secret which will be stored in the namespace of the workspace.
+```
+kubectl apply -f student###-aws-secret.yaml
+```
+
 CloudProviderAccount:
 ```
 apiVersion: kommander.mesosphere.io/v1beta1
 kind: CloudProviderAccount
 metadata:
   name: aws-credentials
+  namespace: student###-#####-#####
+  annotations:
+    kommander.mesosphere.io/display-name: student###-aws-credentials
 spec:
   provider: aws
   credentialsRef:
     name: aws-credentials
-    ```
-    
+```
+We will apply the CloudProviderAccount which will be stored in the namespace of the workspace.
+```
+kubectl apply -f student###-cloudprovideraccount.yaml
+```
+
+
