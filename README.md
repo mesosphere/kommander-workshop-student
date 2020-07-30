@@ -84,19 +84,19 @@ kubectl apply -f student###-aws-secret.yaml
 ```
 
 CloudProviderAccount:
-
-> apiVersion: kommander.mesosphere.io/v1beta1
-> kind: CloudProviderAccount
-> metadata:
->   name: aws-credentials
->   namespace: student###-#####-#####
->   annotations:
->     kommander.mesosphere.io/display-name: student###-aws-credentials
-> spec:
->   provider: aws
->   credentialsRef:
->     name: aws-credentials
-
+```
+apiVersion: kommander.mesosphere.io/v1beta1
+kind: CloudProviderAccount
+metadata:
+  name: aws-credentials
+  namespace: student###-#####-#####
+  annotations:
+    kommander.mesosphere.io/display-name: student###-aws-credentials
+spec:
+  provider: aws
+  credentialsRef:
+    name: aws-credentials
+```
 We will apply the CloudProviderAccount which will be stored in the namespace of the workspace.
 ```
 kubectl apply -f student###-cloudprovideraccount.yaml
