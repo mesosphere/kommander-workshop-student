@@ -64,7 +64,7 @@ NOTE: Assuming you logged in with aws-cli
 
 To create a cluster you need to setup the secret with the AWS credentials and a CloudProviderAccount.
 
-Secret:
+student###-aws-secret.yaml:
 ```yaml
 kind: Secret
 apiVersion: v1
@@ -83,7 +83,7 @@ We will apply the secret which will be stored in the namespace of the workspace.
 `kubectl apply -f student###-aws-secret.yaml`
 
 
-CloudProviderAccount:
+student###-cloudprovideraccount.yaml:
 ```yaml
 apiVersion: kommander.mesosphere.io/v1beta1
 kind: CloudProviderAccount
