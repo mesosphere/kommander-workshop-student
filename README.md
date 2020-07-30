@@ -54,3 +54,38 @@ chmod 400 id_rsa_student#
 ```
 ssh -i id_rsa_student# centos@jumpserver-ip-address
 ```
+
+## Multi-cloud-lab
+
+Creating an AWS Cloud Provider
+In this tutorial we are using AWS Provider, but you can use any other supported infrastructure provider.
+
+NOTE: Assuming you logged in with aws-cli
+
+To create a cluster you need to setup the secret with the AWS credentials and a CloudProviderAccount.
+
+Secret:
+```
+kind: Secret
+apiVersion: v1
+metadata:
+  name: aws-credentials
+data:
+  config: >-
+    W2RlZmF1bHRdCnJlZ2lvbiA9IHVzLWVhc3QtMQpvdXRwdXQgPSBqc29uCgpbcHJvZmlsZSAxMTA0NjU2NTc3NDFfTWVzb3NwaGVyZS1Qb3dlclVzZXJdCnJvbGVfYXJuID0gYXJuOmF3czppYW06OjM5ODA1MzQ1MTc4Mjpyb2xlL2tvbW1hbmRlci1kZXBsb3llcgpjcmVkZW50aWFsX3NvdXJjZSA9IEVjMkluc3RhbmNlTWV0YWRhdGEK
+  profile: Mzk4MDUzNDUxNzgyX01lc29zcGhlcmUtUG93ZXJVc2VyCg==
+  type: YXdz
+type: kommander.mesosphere.io/aws-credentials
+```
+CloudProviderAccount:
+```
+apiVersion: kommander.mesosphere.io/v1beta1
+kind: CloudProviderAccount
+metadata:
+  name: aws-credentials
+spec:
+  provider: aws
+  credentialsRef:
+    name: aws-credentials
+    ```
+    
