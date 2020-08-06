@@ -36,7 +36,11 @@ To create a cluster you need to setup the secret with the AWS credentials and a 
 
 
 **Create Secret**
-student###-aws-secret.yaml:
+
+You will see the data in this object is base64 encoded.  For this lab we are using AWS user roles.  The Role authentication method can only be used if your management cluster is running in AWS.
+
+
+aws-secret.yaml:
 ```yaml
 kind: Secret
 apiVersion: v1
@@ -52,13 +56,13 @@ type: kommander.mesosphere.io/aws-credentials
 ```
 We will apply the secret which will be stored in the namespace of the workspace.
 
-`kubectl apply -f student###-aws-secret.yaml`
+`kubectl apply -f aws-secret.yaml`
 
 **Validate Secret**
 
 Ton validate the secret was created in the correct namespace:
 
-`kubectl get secrets -n student###-#####-#####`
+`kubectl get secrets -n saws-credentials`
 
 To view the contents of the secret we just created:
 
@@ -66,15 +70,18 @@ To view the contents of the secret we just created:
 
 
 1.2 **Create a CloudProviderAccount**
-student###-cloudprovideraccount.yaml:
+
+The CloudProviderAccount object contains the 
+
+cloudprovider.yaml:
 ```yaml
 apiVersion: kommander.mesosphere.io/v1beta1
 kind: CloudProviderAccount
 metadata:
-  name: student000
-  namespace: student###-#####-#####
+  name: aws-credentials
+  namespace: STUDENT000-00000-00000
   annotations:
-    kommander.mesosphere.io/display-name: student###-aws-credentials
+    kommander.mesosphere.io/display-name: STUDENT000 Cloud Provider Account
 spec:
   provider: aws
   credentialsRef:
@@ -82,7 +89,7 @@ spec:
 ```
 We will apply the CloudProviderAccount which will be stored in the namespace of the workspace.
 
-`kubectl apply -f student###-cloudprovideraccount.yaml`
+`kubectl apply -f cloudprovider.yaml`
 
 **Validate CloudProviderAccount***
 
