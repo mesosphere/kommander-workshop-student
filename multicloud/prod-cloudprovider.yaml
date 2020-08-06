@@ -1,8 +1,8 @@
 apiVersion: kommander.mesosphere.io/v1beta1
 kind: CloudProviderAccount
 metadata:
-  name: aws-credentials
-  namespace: STUDENT000
+  name: STUDENT000
+  namespace: STUDENT000-00000-00000
 spec:
   provider: aws
   credentialsRef:
