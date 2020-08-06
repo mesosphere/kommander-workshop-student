@@ -13,57 +13,29 @@ During this workshop, you will learn through the use of customer resource defini
 
 ## Prerequisites
 
-You need either a Linux, MacOS or a Windows client with the ability to ssh to an AWS IP address.
+You need either a Linux, MacOS or a Windows client with the kubernetes command line installed and an internet browser.
+
+**Install and Set Up kubectl**
+The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.
+
+[kubectl installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 
-## Jumpserver
-
-Jumpservers have been deployed for each student with all prerequisites installed. First, go to the student data spreadsheet and select a host by entering your name.  Then, download the ssh-private-key (id_rsa_student#) and change the file permissions.  Finally, ssh to the ipaddress of your assigned jumpserver using the -i option to specify the identity file to be used.  The username for the Jumpserver is "centos".
-
-### Linux/MAC
-For Mac and Linux clients you must change the permission on the file.
-```
-chmod 400 id_rsa_student#
-```
-```
-ssh -i id_rsa_student# centos@jumpserver-ip-address
-```
-### Windows
-#### Log in to PuTTY by using your SSH private key
-Use the following steps to log in to PuTTY by using your SSH private key:
-
-1. Specify the IP address of your assigned jumpserver then enter a name for the session and click Save.
-2. Click Connection > Data in the left navigation pane and set the Auto-login username to "centos".
-3. Click Connection > SSH > Auth in the left navigation pane and configure the SSH private key to use by clicking Browse under Private key file for authentication.
-4. Navigate to the location where you saved your SSH private key file, select the file, and click Open.
-5. The file path for the SSH private key file now displays in the Private key file for authentication field.
-6. Click Session in the left navigation pane, then click Save in the Load, save or delete a stored session section.
-7. Click Open to begin your session with the server.
-
-### Clients with local policy or VPN issues
->Use the [Google Cloud Shell](https://console.cloud.google.com/cloudshell). (Requires a Google account)
-Once your Google Cloud Shell has started, you will have to copy the contents of you id_rsa_student#.pem file to a local file in the cloud shell.  Then change the permission on the file and ssh into the jump host.
 
 
-```
-vi id_rsa_student#
-```
-```
-chmod 400 id_rsa_student#
-```
-```
-ssh -i id_rsa_student# centos@jumpserver-ip-address
-```
 
-## Multi-cloud-lab
+## 1. Multi-cloud-lab
 
-Creating an AWS Cloud Provider
+
+1.1 Creating an AWS Cloud Provider
 In this tutorial we are using AWS Provider, but you can use any other supported infrastructure provider.
 
 NOTE: Assuming you logged in with aws-cli
 
 To create a cluster you need to setup the secret with the AWS credentials and a CloudProviderAccount.
 
+
+**Create Secret**
 student###-aws-secret.yaml:
 ```yaml
 kind: Secret
@@ -82,13 +54,24 @@ We will apply the secret which will be stored in the namespace of the workspace.
 
 `kubectl apply -f student###-aws-secret.yaml`
 
+**Validate Secret**
 
+Ton validate the secret was created in the correct namespace:
+
+`kubectl get secrets -n student###-#####-#####`
+
+To view the contents of the secret we just created:
+
+`kubectl describe secret aws-credentials -n student###-#####-#####`
+
+
+1.2 **Create a CloudProviderAccount**
 student###-cloudprovideraccount.yaml:
 ```yaml
 apiVersion: kommander.mesosphere.io/v1beta1
 kind: CloudProviderAccount
 metadata:
-  name: aws-credentials
+  name: student000
   namespace: student###-#####-#####
   annotations:
     kommander.mesosphere.io/display-name: student###-aws-credentials
@@ -101,6 +84,13 @@ We will apply the CloudProviderAccount which will be stored in the namespace of 
 
 `kubectl apply -f student###-cloudprovideraccount.yaml`
 
+**Validate CloudProviderAccount***
 
+Ton validate the cloudprovideraccount was created in the correct namespace:
 
+`kubectl get cloudprovideraccount -n student###-#####-#####`
+
+To view the contents of the cloudprovideraccount we just created:
+
+`kubectl describe cloudprovideraccount aws-credentials -n student###-#####-#####`
 
