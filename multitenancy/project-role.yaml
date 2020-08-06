@@ -1,0 +1,11 @@
+apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
+kind: ProjectRole
+metadata:
+  name: projectrole-STUDENT000-admin
+  namespace: STUDENT000
+spec:
+  rules:
+    - apiGroups: [""] # "" indicates the core API group
+      resources: ["pods"]
+      verbs: ["get", "watch", "list"]
+EOF
