@@ -32,4 +32,5 @@ Move the binary in to your PATH.
 ``` sudo mv ./kubectl /usr/local/bin/kubectl```
 
 Test to ensure the version you installed is up-to-date:
+
 ``` kubectl version --client```
