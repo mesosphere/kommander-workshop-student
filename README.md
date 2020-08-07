@@ -26,6 +26,15 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 
 ## 1. Multi-cloud-lab
 
+Infrastructure providers like AWS, Azure, and Google provide the infrastructure for your Konvoy clusters. To automate their provisioning, Kommander needs authentication keys for your preferred infrastructure provider. You may have many accounts for a single infrastructure provider.
+
+In order, to provision new clusters and manage them, Kommander needs infrastructure provider credentials.  Infrastructure Provider credentials are configured in each workspace, so you must configure the objects in the namespace of the workspace.
+
+Before deleting an infrastructure provider, Kommander verifies if any existing managed clusters were created using this provider. The infrastructure provider cannot be deleted until all clusters, created with the infrastructure provider, have been deleted. This ensures Kommander has access to your infrastructure provider to remove all resources created for a managed cluster.
+
+To configure an infrastructure provider we will have to complete two steps:
+ 1 - Create an secret in the workspace namespace.
+ 2 - Create a cloudprovideraccount in the workspace namespace that references the secret created in step one.
 
 1.1 Creating an AWS Cloud Provider
 In this tutorial we are using AWS Provider, but you can use any other supported infrastructure provider.
