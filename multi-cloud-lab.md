@@ -1,7 +1,7 @@
 # Managing Kubernetes at Scale
 
-* [Introduction](#introduction)
-* [Prerequisites](#Prerequisites)
+* [Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction)
+* [Prerequisites](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#Prerequisites)
 * [1. Multi-cloud](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md)
 * [2. Multi-cluster](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md)
 * [3. Multitenancy](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md)
