@@ -64,31 +64,32 @@ We will apply the secret which will be stored in the namespace of the workspace.
 
 Ton validate the secret was created in the correct namespace:
 
-`kubectl get secrets -n saws-credentials`
+`kubectl get secrets -n aws-credentials`
 
 To view the contents of the secret we just created:
 
 `kubectl describe secret aws-credentials -n student###-#####-#####`
 
 
-1.2 **Create a CloudProviderAccount**
+2. **Create a CloudProviderAccount**
 
 The CloudProviderAccount object contains the 
 
 cloudprovider.yaml:
-```yaml
-apiVersion: kommander.mesosphere.io/v1beta1
-kind: CloudProviderAccount
-metadata:
-  name: aws-credentials
-  namespace: STUDENT000-00000-00000
-  annotations:
-    kommander.mesosphere.io/display-name: STUDENT000 Cloud Provider Account
-spec:
-  provider: aws
-  credentialsRef:
-    name: aws-credentials
-```
+> ```yaml
+> apiVersion: kommander.mesosphere.io/v1beta1
+> kind: CloudProviderAccount
+> metadata:
+>   name: aws-credentials
+>   namespace: STUDENT000-00000-00000
+>   annotations:
+>     kommander.mesosphere.io/display-name: STUDENT000 Cloud Provider Account
+> spec:
+>   provider: aws
+>   credentialsRef:
+>     name: aws-credentials
+> ```
+
 We will apply the CloudProviderAccount which will be stored in the namespace of the workspace.
 
 `kubectl apply -f cloudprovider.yaml`
