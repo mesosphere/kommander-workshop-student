@@ -20,11 +20,12 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 
 [kubectl installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-*** Install kubectl on Linux
+**Install kubectl on Linux**
 Install kubectl binary with curl on Linux
 Download the latest release with the command:
 
-`curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"`
+```curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"```
+
 To download a specific version, replace the $(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt) portion of the command with the specific version.
 
 For example, to download version v1.18.0 on Linux, type:
