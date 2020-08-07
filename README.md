@@ -21,6 +21,7 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 [kubectl installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 **Install kubectl on Linux**
+
 Install kubectl binary with curl on Linux
 Download the latest release with the command:
 
