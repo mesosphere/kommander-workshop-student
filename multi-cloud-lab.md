@@ -1,3 +1,12 @@
+# Managing Kubernetes at Scale
+
+* [Introduction](#introduction)
+* [Prerequisites](#Prerequisites)
+* [1. Multi-cloud](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md)
+* [2. Multi-cluster](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md)
+* [3. Multitenancy](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md)
+* [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md)
+
 ## Multi-cloud-lab
 
 Infrastructure providers like AWS, Azure, and Google provide the infrastructure for your Konvoy clusters. To automate their provisioning, Kommander needs authentication keys for your preferred infrastructure provider. You may have many accounts for a single infrastructure provider.
