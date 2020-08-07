@@ -24,7 +24,7 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 
 
 
-## 1. Multi-cloud-lab
+## Multi-cloud-lab
 
 Infrastructure providers like AWS, Azure, and Google provide the infrastructure for your Konvoy clusters. To automate their provisioning, Kommander needs authentication keys for your preferred infrastructure provider. You may have many accounts for a single infrastructure provider.
 
@@ -32,36 +32,30 @@ In order, to provision new clusters and manage them, Kommander needs infrastruct
 
 
 To configure an infrastructure provider we will have to complete two steps:
- 1. Create an secret in the workspace namespace.
- 2.  Create a cloudprovideraccount in the workspace namespace that references the secret created in step one.
-
-1.1 Creating an AWS Cloud Provider
-In this tutorial we are using AWS Provider, but you can use any other supported infrastructure provider.
-
-NOTE: Assuming you logged in with aws-cli
-
-To create a cluster you need to setup the secret with the AWS credentials and a CloudProviderAccount.
+ - Create an secret in the workspace namespace.
+ - Create a cloudprovideraccount in the workspace namespace that references the secret created in step one.
 
 
-**Create Secret**
+1. **Create Secret**
 
 You will see the data in this object is base64 encoded.  For this lab we are using AWS user roles.  The Role authentication method can only be used if your management cluster is running in AWS.
 
 
 aws-secret.yaml:
-```yaml
-kind: Secret
-apiVersion: v1
-metadata:
-  name: aws-credentials
-  namespace: student###-#####-#####
-data:
-  config: >-
-    W2RlZmF1bHRdCnJlZ2lvbiA9IHVzLWVhc3QtMQpvdXRwdXQgPSBqc29uCgpbcHJvZmlsZSAxMTA0NjU2NTc3NDFfTWVzb3NwaGVyZS1Qb3dlclVzZXJdCnJvbGVfYXJuID0gYXJuOmF3czppYW06OjM5ODA1MzQ1MTc4Mjpyb2xlL2tvbW1hbmRlci1kZXBsb3llcgpjcmVkZW50aWFsX3NvdXJjZSA9IEVjMkluc3RhbmNlTWV0YWRhdGEK
-  profile: Mzk4MDUzNDUxNzgyX01lc29zcGhlcmUtUG93ZXJVc2VyCg==
-  type: YXdz
-type: kommander.mesosphere.io/aws-credentials
-```
+> ```yaml
+> kind: Secret
+> apiVersion: v1
+> metadata:
+>   name: aws-credentials
+>   namespace: student###-#####-#####
+> data:
+>   config: >-
+>     W2RlZmF1bHRdCnJlZ2lvbiA9IHVzLWVhc3QtMQpvdXRwdXQgPSBqc29uCgpbcHJvZmlsZSAxMTA0NjU2NTc3NDFfTWVzb3NwaGVyZS1Qb3dlclVzZXJdCnJvbGVfYXJuID0gYXJuOmF3czppYW06OjM5ODA1MzQ1MTc4Mjpyb2xlL2tvbW1hbmRlci1kZXBsb3llcgpjcmVkZW50aWFsX3NvdXJjZSA9IEVjMkluc3RhbmNlTWV0YWRhdGEK
+>   profile: Mzk4MDUzNDUxNzgyX01lc29zcGhlcmUtUG93ZXJVc2VyCg==
+>   type: YXdz
+> type: kommander.mesosphere.io/aws-credentials
+> ```
+
 We will apply the secret which will be stored in the namespace of the workspace.
 
 `kubectl apply -f aws-secret.yaml`
@@ -101,7 +95,7 @@ We will apply the CloudProviderAccount which will be stored in the namespace of 
 
 **Validate CloudProviderAccount***
 
-Ton validate the cloudprovideraccount was created in the correct namespace:
+To validate the cloudprovideraccount was created in the correct namespace:
 
 `kubectl get cloudprovideraccount -n student###-#####-#####`
 
