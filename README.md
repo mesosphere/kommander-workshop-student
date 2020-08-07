@@ -28,7 +28,9 @@ Download the latest release with the command:
 ``` curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"```
 
 ``` chmod +x ./kubectl```
+
 Move the binary in to your PATH.
+
 ``` sudo mv ./kubectl /usr/local/bin/kubectl```
 
 Test to ensure the version you installed is up-to-date:
