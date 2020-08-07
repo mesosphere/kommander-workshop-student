@@ -23,15 +23,16 @@ The Kubernetes command-line tool, kubectl, allows you to run commands against Ku
 **Install kubectl on Linux**
 
 Install kubectl binary with curl on Linux
-Download the latest release with the command:
+Download the latest release and move the binary in to your PATH with the following commands:
 
-``` curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"```
+```bash
+{
 
-``` chmod +x ./kubectl```
-
-Move the binary in to your PATH.
-
-``` sudo mv ./kubectl /usr/local/bin/kubectl```
+ curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"```
+ chmod +x ./kubectl
+ sudo mv ./kubectl /usr/local/bin/kubectl
+}
+```
 
 Test to ensure the version you installed is up-to-date:
 
