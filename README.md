@@ -1,15 +1,15 @@
 # Managing Kubernetes at Scale
 
+* [Introduction](#introduction)
+* [Prerequisites](#Prerequisites)
+* [1. Multi-cloud](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md)
+* [2. Multi-cluster](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md)
+* [3. Multitenancy](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md)
+* [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md)
+
 ## Introduction
 
 During this workshop, you will learn through the use of customer resource definitions, controllers and APIs how to manage and operate Kubernetes at scale.
-
-* [Introduction](#introduction)
-* [Prerequisites](#prerequisites)
-* [1. Multi-cloud](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md)
-* [2. Multi-cluster](#2-Multi-cluster)
-* [3. Multitenancy](#3-Multitenancy)
-* [4. Summary](#4-Summary)
 
 ## Prerequisites
 
