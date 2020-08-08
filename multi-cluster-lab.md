@@ -191,6 +191,8 @@ cluster.yaml
 >     name: aws-credentials
 > ```
 
+Deploy the cluster using kubectl.
+
 ```bash
 kubectl apply -f cluster.yaml
 ```
