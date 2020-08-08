@@ -161,3 +161,19 @@ cluster.yaml
 >   cloudProviderAccountRef:
 >     name: aws-credentials
 ```
+
+```bash
+kubectl apply -f cluster.yaml
+```
+
+You can check the KCL controller manager logs to verify cluster provisioning started.
+
+```bash
+kubectl -n kommander logs -l control-plane=kommander-federation-cm -c controller-manager
+```
+
+To provision a cluster KCL uses Kubernetes Jobs.  We can validate by getting the jobs in the workspace namespace.
+
+```bash
+kubectl get jobs -n student000-00000-000000
+```

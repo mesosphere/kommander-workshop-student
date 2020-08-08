@@ -36,3 +36,7 @@ Test to ensure the version you installed is up-to-date:
 ```bash
 kubectl version --client
 ```
+
+**Connect to the Kommander dashboard**
+
+[Kommander Dashboard https://kommander.k8s-workshops.com](https://kommander.k8s-workshops.com)
