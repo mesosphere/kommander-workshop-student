@@ -43,13 +43,24 @@ kubectl version --client
 
 Login with your provided credentials:
 
-** student number: student###
-** password: password
+**student number: student###**
+**password: password**
 
 
-Client tokens
+**Client tokens**
 
 To configure kubectl to access the Kubernetes cluster, obtain a token from the web landing page, by selecting Generate Kubectl Token. Select an identity provider and cluster. As many of the backends provide single-sign on (SSO), you may already be signed in. Otherwise, you will be redirected to your identity provider’s web page to login. Once you have signed in, a page will show the commands required to configure kubectl to access the Konvoy cluster.
 
 When the token expires, it is necessary to repeat the above process to obtain a fresh token. When refreshing a token, only the kubectl config set-credentials command needs to be executed with the new token.
+
+
+**Using kubectl**
+
+One of the most common ways to perform administrative tasks and interact with a Kubernetes cluster is through the kubectl command line interface. With kubectl, you can run commands against native Kubernetes clusters to retrieve information about key cluster activities and to control specific cluster-level components and operations.
+
+Validate you are able to connect to the management cluster.
+
+```bash
+kubectl get nodes
+```
 
