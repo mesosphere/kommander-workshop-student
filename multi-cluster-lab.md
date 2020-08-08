@@ -154,13 +154,42 @@ cluster.yaml
 >       version: 1.17.8
 >     nodePools:
 >     - name: worker
+>       machine:
+>         imageID: ami-0affd4508a5d2481b
+>         rootVolumeSize: 80
+>         rootVolumeType: gp2
+>         imagefsVolumeEnabled: true
+>         imagefsVolumeSize: 160
+>         imagefsVolumeType: gp2
+>         imagefsVolumeDevice: xvdb
+>         type: m5.2xlarge
+>     - name: control-plane
+>       controlPlane: true
+>       count: 3
+>       machine:
+>         imageID: ami-0affd4508a5d2481b
+>         rootVolumeSize: 80
+>         rootVolumeType: io1
+>         rootVolumeIOPS: 1000
+>         imagefsVolumeEnabled: true
+>         imagefsVolumeSize: 160
+>         imagefsVolumeType: gp2
+>         imagefsVolumeDevice: xvdb
+>         type: m5.xlarge
 >     version: v1.5.0
 >   provisioner:
 >     provider: aws
+>     aws:
+>       region: us-east-1
+>       availabilityZones:
+>         - us-east-1b
+>       tags:
+>         owner: sales-se@d2iq.com
+>         expiration: 12h
 >     version: v1.5.0
 >   cloudProviderAccountRef:
 >     name: aws-credentials
-```
+> ```
 
 ```bash
 kubectl apply -f cluster.yaml
@@ -175,5 +204,30 @@ kubectl -n kommander logs -l control-plane=kommander-federation-cm -c controller
 To provision a cluster KCL uses Kubernetes Jobs.  We can validate by getting the jobs in the workspace namespace.
 
 ```bash
-kubectl get jobs -n student000-00000-000000
+kubectl get jobs -n WORKSPACE-NAMESPACE
 ```
+
+When we know the pod name we can check the logs.
+
+```bash
+kubectl -n WORKSPACE-NAMESPACE logs sample-kubernetes-tutorial-z9hqw -f
+```
+
+Waiting for the cluster to be provisioned.
+
+```bash
+kubectl -n WORKSPACE-NAMESPACE get konvoycluster -w
+```
+
+The kubeconfig to access the new cluster is stored in a secret.
+
+```bash
+kubectl -n WORKSPACE-NAMESPACE get secret --field-selector type=kommander.mesosphere.io/kubeconfig -o=jsonpath="{.items[0].data.kubeconfig}" | base64 -d > cluster.kubeconfig
+```
+
+Test the connection to the newly deployed cluster.
+
+```bash
+kubectl get nodes --kubeconfig cluster.kubeconfig
+```
+
