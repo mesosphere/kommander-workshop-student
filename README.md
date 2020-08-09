@@ -39,7 +39,7 @@ kubectl version --client
 
 **Connect to the Kommander dashboard**
 
-[Kommander Dashboard https://kommander.k8s-workshops.com](https://kommander.k8s-workshops.com)
+[Kommander Dashboard https://kommander.k8s-workshops.com](https://kommander.k8s-workshops.comops/portal/kommander/ui/#/)
 
 Login with your provided credentials:
 
@@ -63,4 +63,15 @@ Validate you are able to connect to the management cluster.
 ```bash
 kubectl get nodes
 ```
+
+**Configuring environment variables**
+
+These environment variables will be used in the labs today.
+
+```bash
+export STUDENT=student001
+export WORKSPACENS=$(kubectl get ws $student | awk {'print $3'} | grep student | sed 's/[",]//g')
+export PROJECTNS=project$(STUDENT)
+```
+
 
