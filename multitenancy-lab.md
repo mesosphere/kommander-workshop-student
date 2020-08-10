@@ -266,5 +266,6 @@ Then, if you run the following command on a Kubernetes cluster associated with t
 kubectl -n ${projectns} get addons.kubeaddons.mesosphere.io jenkins -o yaml
 ``` 
 ---  
-[Continue to the Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)
+[<- Reuturn to the Multi-cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab) -- 
+[Continue to the Summary ->](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)
 
