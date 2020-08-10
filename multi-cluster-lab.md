@@ -204,16 +204,14 @@ From the dashboard page click the cluster page to validate the cluster is being 
 
 To view the build logs, click on the "View Logs" link in the cluster card.  
 ![Kommander Dashboard - Kibana!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/kibana-dashboard.png)
-The kubeconfig to access the new cluster is stored in a secret.
 
-```bash
-kubectl -n WORKSPACE-NAMESPACE get secret --field-selector type=kommander.mesosphere.io/kubeconfig -o=jsonpath="{.items[0].data.kubeconfig}" | base64 -d > cluster.kubeconfig
-```
+The kubeconfig to access the new cluster is stored in a secret and can be downloaded via the cluster details menu on the cluster's card in the dashboard.
+![Kommander Dashboard - kubeconfig!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/kubeconfig.png)
 
 Test the connection to the newly deployed cluster.
 
 ```bash
-kubectl get nodes --kubeconfig cluster.kubeconfig
+kubectl get nodes --kubeconfig student001.kubeconfig
 ```
 ---  
 [<- Return to the Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab) --  
