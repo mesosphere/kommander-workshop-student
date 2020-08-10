@@ -15,7 +15,7 @@ Kommander delivers visibility and management of any Kubernetes cluster, whether 
 Kommander was developed to address the broad issues caused by Kubernetes “cluster sprawl.” D2iQ’s Kommander delivers federated management, governance, and visibility across an organization’s expansive use of Kubernetes clusters. As various parts of the organization require new Kubernetes clusters and associated data services, Kommander simplifies the provisioning of new services and creates greater policy-driven consistency across Kubernetes clusters within the environment. This capability allows for greater standardization of Kubernetes ensuring easier support paths for application services. This level of broad control helps organizations meet risk and compliance demands as they govern how and where new application services are used, and who is able to engage in policy and operational needs of those services.
 
 
-![Kommander architecture!](https://docs.d2iq.com/ksphere/kommander/1.1/img/Kommander_architecture.png "Kommander_architecture")
+![Kommander architecture!](https://docs.d2iq.com/ksphere/kommander/1.1/img/Kommander_architecture.png "Kommander_architecture")  
 
 ---  
 [Konvoy free trial](https://d2iq.com/solutions/ksphere/konvoy#request-free-trial)  

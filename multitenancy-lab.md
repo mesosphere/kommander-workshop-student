@@ -10,6 +10,8 @@
 
 Multitenancy-Lab
 
+![Kommander architecture!](https://docs.d2iq.com/ksphere/kommander/1.1/img/Kommander_architecture.png "Kommander_architecture")  
+
 **Workspaces**
 
 Workspaces give you the flexibility to represent your organization in a way that makes sense for your team and configuration.

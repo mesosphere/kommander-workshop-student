@@ -48,7 +48,7 @@ kubectl apply -f aws-secret.yaml`
 
 **Validate Secret**
 
-Ton validate the secret was created in the correct namespace:
+To validate the secret was created in the correct namespace:
 
 ```bash
 kubectl get secrets -n aws-credentials`
