@@ -197,30 +197,10 @@ Deploy the cluster using kubectl.
 ```bash
 kubectl apply -f cluster.yaml
 ```
+**Validate that the cluster is deploying via the Kommander Dashboard**
+From the dashboard page click the cluster page to validate the cluster is being deployed.
 
-You can check the KCL controller manager logs to verify cluster provisioning started.
-
-```bash
-kubectl -n kommander logs -l control-plane=kommander-federation-cm -c controller-manager
-```
-
-To provision a cluster KCL uses Kubernetes Jobs.  We can validate by getting the jobs in the workspace namespace.
-
-```bash
-kubectl get jobs -n WORKSPACE-NAMESPACE
-```
-
-When we know the pod name we can check the logs.
-
-```bash
-kubectl -n WORKSPACE-NAMESPACE logs sample-kubernetes-tutorial-z9hqw -f
-```
-
-Waiting for the cluster to be provisioned.
-
-```bash
-kubectl -n WORKSPACE-NAMESPACE get konvoycluster -w
-```
+![Kommander Dashboard - Clusters!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/dashboard-clusters.png)
 
 The kubeconfig to access the new cluster is stored in a secret.
 
