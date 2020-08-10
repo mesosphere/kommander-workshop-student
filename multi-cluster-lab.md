@@ -154,6 +154,7 @@ cluster.yaml
 >       version: 1.17.8
 >     nodePools:
 >     - name: worker
+>       count: 4
 >       machine:
 >         imageID: ami-0affd4508a5d2481b
 >         rootVolumeSize: 80
