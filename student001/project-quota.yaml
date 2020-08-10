@@ -1,0 +1,13 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedResourceQuota
+metadata:
+  name: kommander
+  namespace: ${projectns}
+spec:
+  placement:
+    clusterSelector: {}
+  template:
+    spec:
+      hard:
+        limits.cpu: "10"
+        limits.memory: 1024.000Mi
