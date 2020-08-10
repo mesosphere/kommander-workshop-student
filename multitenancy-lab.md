@@ -179,6 +179,26 @@ When a Project Policy is created, Kommander creates a Kubernetes FederatedRoleBi
 kubectl apply -f project-policy.yaml
 ```
 
+**Project Quotas**
+
+Project Quotas can be set up to limit the amount of resources that can be used by the Project team. Quotas are applied to all project clusters.  Kommander provides a set of default resources you can set Quotas for, or you can define Quotas for custom resources. It is recommended to set Quotas for CPU and Memory.  All the Project Quotas are defined using a Kubernetes FederatedResourceQuota called kommander and can also be created/updated using kubectl:
+
+project-quota.yaml
+>```yaml
+> apiVersion: types.kubefed.io/v1beta1
+> kind: FederatedResourceQuota
+> metadata:
+>   name: kommander
+>   namespace: ${projectns}
+> spec:
+>   placement:
+>     clusterSelector: {}
+>   template:
+>     spec:
+>       hard:
+>         limits.cpu: "10"
+>         limits.memory: 1024.000Mi
+> ```
 
 
 ---  
