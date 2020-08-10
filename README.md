@@ -43,10 +43,8 @@ kubectl version --client
 
 Login with your provided credentials:
 
-**student number: student###**
-
-**password: password**
-
+student number: student###  
+password: password  
 
 **Client tokens**
 
