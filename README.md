@@ -1,7 +1,6 @@
 # Managing Kubernetes at Scale
 
 [Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction)  
-[Prerequisites](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#Prerequisites)  
 [1. Multi-cloud](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
 [2. Multi-cluster](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
 [3. Multitenancy](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
@@ -72,6 +71,8 @@ These environment variables will be used in the labs today.
 ```bash
 export STUDENT=student0##
 export WORKSPACENS=$(kubectl get ws $student | awk {'print $3'} | grep student | sed 's/[",]//g')
+export VIRTUALGROUP=$(kubectl -n kommander get virtualgroup.kommander.mesosphere.io -o jsonpath='{.items[?(@.metadata.generateName=="user1-")].metadata.name}')
+export PROJECTROLE=$(kubectl -n ${projectns} get projectroles.workspaces.kommander.mesosphere.io -o jsonpath='{.items[?(@.metadata.generateName=="admin-")].metadata.name}')
 export PROJECTNS=project$(STUDENT)
 ```
 ---  
