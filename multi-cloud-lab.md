@@ -101,5 +101,5 @@ kubectl describe cloudprovideraccount aws-credentials -n student###-#####-#####`
 > Before deleting an infrastructure provider, Kommander verifies if any existing managed clusters were created using this provider. The infrastructure provider cannot be deleted until all clusters, created with the infrastructure provider, have been deleted. This ensures Kommander has access to your infrastructure provider to remove all resources created for a managed cluster.  
 
 --- 
-<[Go back to the Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction) --
-[Continue to the Multi-cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)>
+[<- Go back to the Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction) --
+[Continue to the Multi-cluster lab ->](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)
