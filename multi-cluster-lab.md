@@ -208,7 +208,7 @@ To view the build logs, click on the "View Logs" link in the cluster card.
 The kubeconfig to access the new cluster is stored in a secret and can be downloaded via the cluster details menu on the cluster's card in the dashboard.
 ![Kommander Dashboard - kubeconfig!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/kubeconfig.png)
 
-Test the connection to the newly deployed cluster.
+Test the connection to the newly deployed cluster.  You must specify the location of the downloaded kubeconfig file.
 
 ```bash
 kubectl get nodes --kubeconfig student001.kubeconfig
