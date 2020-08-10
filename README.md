@@ -6,6 +6,8 @@
 [2. Multi-cluster](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
 [3. Multitenancy](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
+---
+
 
 ## Introduction
 
@@ -72,5 +74,5 @@ export STUDENT=student0##
 export WORKSPACENS=$(kubectl get ws $student | awk {'print $3'} | grep student | sed 's/[",]//g')
 export PROJECTNS=project$(STUDENT)
 ```
-
+---  
 [Continue to the Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  

@@ -1,22 +1,11 @@
 # Managing Kubernetes at Scale
 
-[Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction)
-
----
-[Prerequisites](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#Prerequisites)
-
----
-[1. Multi-cloud](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)
-
----
-[2. Multi-cluster](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)
-
----
-[3. Multitenancy](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)
-
----
-[4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)
-
+[Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction)  
+[Prerequisites](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#Prerequisites)  
+[1. Multi-cloud](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
+[2. Multi-cluster](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
+[3. Multitenancy](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
+[4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
 
 ## Summary
@@ -28,7 +17,7 @@ Kommander was developed to address the broad issues caused by Kubernetes “clus
 
 ![Kommander architecture!](https://docs.d2iq.com/ksphere/kommander/1.1/img/Kommander_architecture.png "Kommander_architecture")
 
-
+---  
 [Konvoy free trial](https://d2iq.com/solutions/ksphere/konvoy#request-free-trial)  
 [D2IQ Events](https://d2iq.com/events)  
 
