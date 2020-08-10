@@ -42,7 +42,7 @@ aws-secret.yaml:
 We will apply the secret which will be stored in the namespace of the workspace.
 
 ```bash
-kubectl apply -f aws-secret.yaml`
+kubectl apply -f aws-secret.yaml
 ```
 
 **Validate Secret**
@@ -50,13 +50,13 @@ kubectl apply -f aws-secret.yaml`
 To validate the secret was created in the correct namespace:
 
 ```bash
-kubectl get secrets -n aws-credentials`
+kubectl get secrets -n aws-credentials
 ```
 
 To view the contents of the secret we just created:
 
 ```bash
-kubectl describe secret aws-credentials -n student###-#####-#####`
+kubectl describe secret aws-credentials -n student###-#####-#####
 ```
 
 2. **Create a CloudProviderAccount**
@@ -81,7 +81,7 @@ cloudprovider.yaml:
 We will apply the CloudProviderAccount which will be stored in the namespace of the workspace.
 
 ```bash
-kubectl apply -f cloudprovider.yaml`
+kubectl apply -f cloudprovider.yaml
 ```
 
 **Validate CloudProviderAccount***
@@ -89,13 +89,13 @@ kubectl apply -f cloudprovider.yaml`
 To validate the cloudprovideraccount was created in the correct namespace:
 
 ```bash
-kubectl get cloudprovideraccount -n student###-#####-#####`
+kubectl get cloudprovideraccount -n student###-#####-#####
 ```
 
 To view the contents of the cloudprovideraccount we just created:
 
 ```bash
-kubectl describe cloudprovideraccount aws-credentials -n student###-#####-#####`
+kubectl describe cloudprovideraccount aws-credentials -n student###-#####-#####
 ```
 
 > Before deleting an infrastructure provider, Kommander verifies if any existing managed clusters were created using this provider. The infrastructure provider cannot be deleted until all clusters, created with the infrastructure provider, have been deleted. This ensures Kommander has access to your infrastructure provider to remove all resources created for a managed cluster.  
