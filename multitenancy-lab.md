@@ -202,7 +202,7 @@ project-quota.yaml
 
 **Project Platform Services**
 
-Project Platform Services are services that you want to be deployed on all the Kubernetes clusters associated with the Project, in the corresponding namespace.  Kommander can be extended with the AddonRepository resource that point to git repositories containing application addons. For our example, we are using the default example repository that ships with Kommander.  Since a project Platform Service is simply a Kubernetes FederatedAddon, it can also be created using kubectl.
+Project Platform Services are services that you want to be deployed on all the Kubernetes clusters associated with the Project, in the corresponding namespace.  Kommander can be extended with the AddonRepository resource that point to git repositories containing application addons. For our example, we are using the default example repository that ships with Kommander.  
 
 project-platform-services.yaml
 > ```yaml
@@ -255,6 +255,17 @@ project-platform-services.yaml
 >         version: 1.9.4 
 > ```
 
+Since a project Platform Service is simply a Kubernetes FederatedAddon, it can also be created using kubectl.
+
+```bash
+kubectl create -f project-platform-services.yaml
+```
+
+Then, if you run the following command on a Kubernetes cluster associated with the Project, you’ll see a Kubernetes Addon Object, in the corresponding namespace:
+
+```bash
+kubectl -n ${projectns} get addons.kubeaddons.mesosphere.io jenkins -o yaml
+``` 
 ---  
 [Continue to the Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)
 
