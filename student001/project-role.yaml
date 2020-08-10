@@ -1,8 +1,8 @@
 apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
 kind: ProjectRole
 metadata:
-  name: projectrole
-  namespace: STUDENT000
+  name: projectadminrole
+  namespace: project
 spec:
   rules:
     - apiGroups: [""] # "" indicates the core API group

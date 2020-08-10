@@ -1,13 +1,20 @@
 apiVersion: types.kubefed.io/v1beta1
 kind: FederatedResourceQuota
 metadata:
+  finalizers:
+  - kubefed.io/sync-controller
+  generation: 3
   name: kommander
-  namespace: ${projectns}
-spec:
-  placement:
-    clusterSelector: {}
+  namespace: project
+  spec:
+    placement:
+      clusterSelector:
+        matchLabels:
+          cluster: prod
   template:
     spec:
       hard:
-        limits.cpu: "10"
-        limits.memory: 1024.000Mi
+        limits.cpu: "4"
+        limits.memory: 2048.000Mi
+        requests.cpu: "2"
+        requests.memory: 1024.000Mi
