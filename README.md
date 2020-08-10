@@ -61,7 +61,7 @@ One of the most common ways to perform administrative tasks and interact with a 
 Validate you are able to connect to the management cluster.
 
 ```bash
-kubectl get nodes
+kubectl get namespace WORKSPACENS
 ```
 
 **Configuring environment variables**
@@ -73,7 +73,7 @@ export STUDENT=student0##
 export WORKSPACENS=$(kubectl get ws $student | awk {'print $3'} | grep student | sed 's/[",]//g')
 export VIRTUALGROUP=$(kubectl -n kommander get virtualgroup.kommander.mesosphere.io -o jsonpath='{.items[?(@.metadata.generateName=="user1-")].metadata.name}')
 export PROJECTROLE=$(kubectl -n ${projectns} get projectroles.workspaces.kommander.mesosphere.io -o jsonpath='{.items[?(@.metadata.generateName=="admin-")].metadata.name}')
-export PROJECTNS=project$(STUDENT)
+export PROJECTNS=$(STUDENT)
 ```
 ---  
 [Continue to the Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
