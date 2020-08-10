@@ -213,6 +213,18 @@ Test the connection to the newly deployed cluster.
 ```bash
 kubectl get nodes --kubeconfig student001.kubeconfig
 ```
+
+>```bash
+> $ kubectl get nodes --kubeconfig ~/Downloads/student001-kubeconfig.yaml
+> NAME                           STATUS   ROLES    AGE   VERSION
+> ip-10-0-130-233.ec2.internal   Ready    <none>   20m   v1.17.8
+> ip-10-0-131-46.ec2.internal    Ready    <none>   20m   v1.17.8
+> ip-10-0-135-185.ec2.internal   Ready    <none>   20m   v1.17.8
+> ip-10-0-138-221.ec2.internal   Ready    <none>   20m   v1.17.8
+> ip-10-0-194-199.ec2.internal   Ready    master   23m   v1.17.8
+> ip-10-0-197-53.ec2.internal    Ready    master   23m   v1.17.8
+> ip-10-0-200-218.ec2.internal   Ready    master   23m   v1.17.8
+> ```
 ---  
 [<- Return to the Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab) --  
 [Continue to the Multitenancy lab ->](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)
