@@ -198,10 +198,12 @@ Deploy the cluster using kubectl.
 kubectl apply -f cluster.yaml
 ```
 **Validate that the cluster is deploying via the Kommander Dashboard**
-From the dashboard page click the cluster page to validate the cluster is being deployed.
 
+From the dashboard page click the cluster page to validate the cluster is being deployed.  
 ![Kommander Dashboard - Clusters!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/dashboard-clusters.png)
 
+To view the build logs, click on the "View Logs" link in the cluster card.  
+![Kommander Dashboard - Kibana!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/kibana-dashboard.png)
 The kubeconfig to access the new cluster is stored in a secret.
 
 ```bash
