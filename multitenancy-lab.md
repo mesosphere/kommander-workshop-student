@@ -37,8 +37,7 @@ As mentioned above, a Project Namespace corresponds to a Kubernetes Federated Na
 
 To determine which Kubernetes clusters will be part of this project, you can either select manually existing clusters or define labels that Kommander will use to dynamically add clusters. The latter is recommended because it will allow you to deploy additional Kubernetes clusters later and to have them automatically associated with Projects based on their labels.  This is what we will use.
 
-project.yaml
-
+project.yaml  
 >```yaml
 > apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
 > kind: Project
