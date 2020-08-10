@@ -27,3 +27,8 @@ Kommander was developed to address the broad issues caused by Kubernetes “clus
 
 
 ![Kommander architecture!](https://docs.d2iq.com/ksphere/kommander/1.1/img/Kommander_architecture.png "Kommander_architecture")
+
+
+[Konvoy free trial](https://d2iq.com/solutions/ksphere/konvoy#request-free-trial)  
+[D2IQ Events](https://d2iq.com/events)  
+

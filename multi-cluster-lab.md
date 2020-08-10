@@ -233,3 +233,4 @@ Test the connection to the newly deployed cluster.
 kubectl get nodes --kubeconfig cluster.kubeconfig
 ```
 
+[Continue to the Multitenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)

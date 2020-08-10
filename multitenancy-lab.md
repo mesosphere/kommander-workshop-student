@@ -149,4 +149,9 @@ kubectl -n ${projectns} get federatedroles.types.kubefed.io projectrole -o yaml
 
 Then, if you run the following command on a Kubernetes cluster associated with the Project, you’ll see a Kubernetes Role object in the corresponding namespace:
 
-kubectl -n ${projectns} get role projectrole -o yaml
+```bash
+kubectl -n ${projectns} get role projectrole -o yaml  
+```
+
+[Continue to the Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)
+
