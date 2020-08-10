@@ -1,0 +1,14 @@
+apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
+kind: Project
+metadata:
+  name: project-STUDENT000
+  namespace: STUDENT000-00000-00000
+spec:
+  workspaceRef:
+    name: STUDENT000
+placement:
+    namespaceName: project-STUDENT000
+    clusterSelector:
+      matchLabels:
+        cluster: prod
+

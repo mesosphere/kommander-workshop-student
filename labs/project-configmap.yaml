@@ -1,0 +1,15 @@
+apiVersion: types.kubefed.io/v1beta1
+kind: FederatedConfigMap
+metadata:
+  annotations:
+    kommander.mesosphere.io/display-name: cm1
+  generateName: cm1-
+  namespace: PROJECTNS
+spec:
+  placement:
+    clusterSelector:
+      matchLabels:
+       cluster: prod
+  template:
+    data:
+      key: value
