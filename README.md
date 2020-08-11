@@ -74,6 +74,7 @@ When the token expires, it is necessary to repeat the above process to obtain a 
 One of the most common ways to perform administrative tasks and interact with a Kubernetes cluster is through the kubectl command line interface. With kubectl, you can run commands against native Kubernetes clusters to retrieve information about key cluster activities and to control specific cluster-level components and operations.
 
 Validate you are able to connect to the management cluster.  
+
 Windows  
 ```bash
 setENV.bat
