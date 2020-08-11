@@ -69,26 +69,21 @@ When the token expires, it is necessary to repeat the above process to obtain a 
 
 
 
-
-**Configuring environment variables**
-
-These environment variables will be used in the labs today.
-
-```bash
-export STUDENT=student001
-export WORKSPACENS=$(kubectl get ws $student | awk {'print $3'} | grep student | sed 's/[",]//g')
-```
-
 **Using kubectl**
 
 One of the most common ways to perform administrative tasks and interact with a Kubernetes cluster is through the kubectl command line interface. With kubectl, you can run commands against native Kubernetes clusters to retrieve information about key cluster activities and to control specific cluster-level components and operations.
 
 Validate you are able to connect to the management cluster.
+Windows  
 ```bash
-kubectl config set-context --current --namespace=WORKSPACENS
-```
-
-
+setENV.bat
+```  
+Mac/Linux  
+```bash
+chmod +x setENV.sh
+./setENV.sh
+``` 
+Verify your API connection:  
 ```bash
 kubectl get pods
 ```
