@@ -6,7 +6,9 @@
 [3. Multitenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
+Please go to the Google Drive share and put your name in the Student_Data sheet next to a student number.  This will be your student number and password you will use for today's workshop.  
 
+[Google Drive Share](https://drive.google.com/drive/folders/1V9nU9IFZuLEvIZsz-pg5xH0RNUJhKXBK?usp=sharing)
 
 ## Introduction
 
