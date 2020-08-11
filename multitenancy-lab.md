@@ -59,6 +59,13 @@ Create the project via kubectl.
 kubectl apply -f project.yaml
 ```
 
+**Validate project creation**
+
+Validate the project was create via the Kommander dashboard from the projects menu.
+
+![Kommander Dashboard - project!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/project.png)
+
+
 **Project ConfigMaps**
 
 Project ConfigMaps can be created to make sure Kubernetes ConfigMaps are automatically created on all Kubernetes clusters associated with the Project, in the corresponding namespace.
@@ -87,12 +94,6 @@ Apply the federated configmap via kubectl:
 kubectl apply -f configmap.yaml
 ```
 
-Then, if you run the following command on a Kubernetes cluster associated with the Project, you’ll see a Kubernetes ConfigMap Object, in the corresponding namespace:
-
-```bash
-kubectl -n ${projectns} get configmap
-```
-
 **Project Secrets**
 
 Project Secrets can be created to make sure a Kubernetes Secrets are automatically created on all the Kubernetes clusters associated with the Project, in the corresponding namespace.
@@ -117,10 +118,10 @@ A Project Secret is simply a Kubernetes FederatedConfigSecret and can also be cr
 >       key: dmFsdWU=
 > ```
 
-Then, if you run the following command on a Kubernetes cluster associated with the Project, you’ll see a Kubernetes Secret Object, in the corresponding namespace:
+Apply the secret via kubectl:
 
 ```bash
-kubectl -n ${projectns} get secret
+kubectl apply -f project.secret.yaml
 ```
 
 **Project Roles**
@@ -259,12 +260,12 @@ Since a project Platform Service is simply a Kubernetes FederatedAddon, it can a
 ```bash
 kubectl create -f project-platform-services.yaml
 ```
+**Validate the project configuration**
 
-Then, if you run the following command on a Kubernetes cluster associated with the Project, you’ll see a Kubernetes Addon Object, in the corresponding namespace:
+To validate the project configuration, from the projects menu, click the project in the list.  This will take you into the project summary which will contain the platform services, clusters, roles, policies, configmaps, secrets, and quotas.
 
-```bash
-kubectl -n ${projectns} get addons.kubeaddons.mesosphere.io jenkins -o yaml
-``` 
+![Kommander Dashboard - Proejcts!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/project-complete.png)
+ 
 ---  
 [<- Reuturn to the Multi-cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab) -- 
 [Continue to the Summary ->](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)

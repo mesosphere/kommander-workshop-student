@@ -3,7 +3,6 @@ kind: FederatedResourceQuota
 metadata:
   finalizers:
   - kubefed.io/sync-controller
-  generation: 3
   name: kommander
   namespace: project
   spec:
