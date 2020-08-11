@@ -88,7 +88,10 @@ kubectl config set-context --current --namespace=WORKSPACENS
 ```bash
 kubectl get pods
 ```
-
+You should recieve an output that says:  
+> ```bash
+> No resources found in student001-g4vf9 namespace.
+> ```
 
 ---  
 [Continue to the Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
