@@ -7,7 +7,7 @@
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
 
-Multitenancy-Lab
+## Multitenancy-Lab
 
 ![Kommander architecture!](https://docs.d2iq.com/ksphere/kommander/1.1/img/Kommander_architecture.png "Kommander_architecture")  
 
