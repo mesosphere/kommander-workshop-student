@@ -81,7 +81,7 @@ setupENV.bat
 ```  
 Mac/Linux  
 ```bash
-chmod +x setENV.sh
+chmod +x setupENV.sh
 ./setupENV.sh
 ``` 
 Verify your API connection:  
