@@ -77,12 +77,12 @@ Validate you are able to connect to the management cluster.
 
 Windows  
 ```bash
-setENV.bat
+setupENV.bat
 ```  
 Mac/Linux  
 ```bash
 chmod +x setENV.sh
-./setENV.sh
+./setupENV.sh
 ``` 
 Verify your API connection:  
 ```bash
