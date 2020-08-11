@@ -41,13 +41,13 @@ project.yaml
 > apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
 > kind: Project
 > metadata:
->   name: project-STUDENT000
->   namespace: STUDENT000-00000-00000
+>   name: project
+>   namespace: student001-g4vf9
 > spec:
 >   workspaceRef:
->     name: STUDENT000
-> placement:
->     namespaceName: project-STUDENT000
+>     name: student001
+>   namespaceName: project
+>   placement:
 >     clusterSelector:
 >       matchLabels:
 >         cluster: prod
@@ -73,19 +73,31 @@ Project ConfigMaps can be created to make sure Kubernetes ConfigMaps are automat
 A Project ConfigMap is simply a Kubernetes FederatedConfigMap and can also be created using kubectl:
 
 > ```yaml
-> apiVersion: types.kubefed.io/v1beta1
-> kind: FederatedConfigMap
+> apiVersion: v1
+> items:
+> - apiVersion: types.kubefed.io/v1beta1
+>   kind: FederatedConfigMap
+>   metadata:
+>     annotations:
+>       kommander.mesosphere.io/description: ""
+>       kommander.mesosphere.io/display-name: configmap
+>     finalizers:
+>     - kubefed.io/sync-controller
+>     generation: 1
+>     name: configmap
+>     namespace: project
+>   spec:
+>     placement:
+>       clusterSelector:
+>         matchLabels:
+>           cluster: prod
+>     template:
+>       data:
+>         config: map
+> kind: List
 > metadata:
->   annotations:
->     kommander.mesosphere.io/display-name: cm1
->   generateName: cm1-
->   namespace: ${projectns}
-> spec:
->   placement:
->     clusterSelector: {}
->   template:
->     data:
->       key: value
+>   resourceVersion: ""
+>   selfLink: ""
 > ```
 
 Apply the federated configmap via kubectl:
@@ -101,21 +113,31 @@ Project Secrets can be created to make sure a Kubernetes Secrets are automatical
 A Project Secret is simply a Kubernetes FederatedConfigSecret and can also be created using kubectl:
 
 > ```yaml
-> apiVersion: types.kubefed.io/v1beta1
-> kind: FederatedSecret
+> apiVersion: v1
+> items:
+> - apiVersion: types.kubefed.io/v1beta1
+>   kind: FederatedSecret
+>   metadata:
+>     annotations:
+>       kommander.mesosphere.io/description: ""
+>       kommander.mesosphere.io/display-name: secret
+>     finalizers:
+>     - kubefed.io/sync-controller
+>     generation: 1
+>     name: secret
+>     namespace: project
+>   spec:
+>     placement:
+>       clusterSelector:
+>         matchLabels:
+>           cluster: prod
+>     template:
+>       data:
+>         admin: cGFzc3dvcmQ=
+> kind: List
 > metadata:
->   annotations:
->     kommander.mesosphere.io/display-name: secret1
->   generateName: secret1-
->   namespace: ${projectns}
-> spec:
->   placement:
->     clusterSelector:
->       matchLabels:
->         cluster: prod
->   template:
->     data:
->       key: dmFsdWU=
+>   resourceVersion: ""
+>   selfLink: ""
 > ```
 
 Apply the secret via kubectl:
@@ -134,8 +156,8 @@ project-role.yaml
 > apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
 > kind: ProjectRole
 > metadata:
->   name: projectrole
->   namespace: STUDENT000
+>   name: projectadminrole
+>   namespace: project
 > spec:
 >   rules:
 >     - apiGroups: [""] # "" indicates the core API group
@@ -143,17 +165,6 @@ project-role.yaml
 >       verbs: ["*"]
 > ```
 
-When a Project Role is created, Kommander creates a Kubernetes FederatedRole on the Kubernetes cluster where Kommander is running:
-
-```bash
-kubectl -n ${projectns} get federatedroles.types.kubefed.io projectrole -o yaml
-```
-
-Then, if you run the following command on a Kubernetes cluster associated with the Project, you’ll see a Kubernetes Role object in the corresponding namespace:
-
-```bash
-kubectl -n ${projectns} get role projectrole -o yaml  
-```
 
 **Project Policy**
 
@@ -165,40 +176,19 @@ project-policy.yaml
 > apiVersion: workspaces.kommander.mesosphere.io/v1alpha1
 > kind: VirtualGroupProjectRoleBinding
 > metadata:
->   generateName: projectpolicy-
->   namespace: ${projectns}
+>   name: projectpolicy
+>   namespace: project
 > spec:
 >   projectRoleRef:
->     name: ${projectrole}
+>     name: projectadminrole
 >   virtualGroupRef:
->     name: ${virtualgroup}
+>     name: student001
 > ```
 
 When a Project Policy is created, Kommander creates a Kubernetes FederatedRoleBinding on the Kubernetes cluster where Kommander is running. Run the following command to create the policy using kubectl:  
 ```bash
 kubectl apply -f project-policy.yaml
 ```
-
-**Project Quotas**
-
-Project Quotas can be set up to limit the amount of resources that can be used by the Project team. Quotas are applied to all project clusters.  Kommander provides a set of default resources you can set Quotas for, or you can define Quotas for custom resources. It is recommended to set Quotas for CPU and Memory.  All the Project Quotas are defined using a Kubernetes FederatedResourceQuota called kommander and can also be created/updated using kubectl:
-
-project-quota.yaml
->```yaml
-> apiVersion: types.kubefed.io/v1beta1
-> kind: FederatedResourceQuota
-> metadata:
->   name: kommander
->   namespace: ${projectns}
-> spec:
->   placement:
->     clusterSelector: {}
->   template:
->     spec:
->       hard:
->         limits.cpu: "10"
->         limits.memory: 1024.000Mi
-> ```
 
 **Project Platform Services**
 
