@@ -1,0 +1,48 @@
+apiVersion: kommander.mesosphere.io/v1beta1
+kind: KonvoyCluster
+metadata:
+  name: student001
+  labels:
+    cluster: prod
+spec:
+  cluster:
+    addons:    
+    containerNetworking:
+      calico:
+        encapsulation: ipip
+        version: v3.13.4
+    containerRuntime:
+      containerd:
+        version: 1.3.4
+    kubernetes:
+      admissionPlugins:
+        enabled:
+        - NodeRestriction
+        - AlwaysPullImages
+      cloudProvider:
+        provider: aws
+      networking:
+        podSubnet: 192.168.0.0/16
+        serviceSubnet: 10.0.0.0/18
+      version: 1.17.8
+    version: v1.5.0
+  provisioner:
+    provider: aws
+    aws:
+      region: us-east-1
+      availabilityZones:
+        - us-east-1a
+        - us-east-1b
+        - us-east-1c
+      tags:
+        owner: sales-se@d2iq.com
+        expiration: 12h
+    nodePools:
+    - name: worker
+      count: 4
+    - name: control-plane
+      controlPlane: true
+      count: 3
+    version: v1.5.0
+  cloudProviderAccountRef:
+    name: aws-credentials
