@@ -103,7 +103,7 @@ A Project ConfigMap is simply a Kubernetes FederatedConfigMap and can also be cr
 Apply the federated configmap via kubectl:
 
 ```bash
-kubectl apply -f configmap.yaml
+kubectl apply -f project-configmap.yaml
 ```
 
 **Project Secrets**
@@ -143,7 +143,7 @@ A Project Secret is simply a Kubernetes FederatedConfigSecret and can also be cr
 Apply the secret via kubectl:
 
 ```bash
-kubectl apply -f project.secret.yaml
+kubectl apply -f project-secret.yaml
 ```
 
 **Project Roles**
@@ -165,6 +165,11 @@ project-role.yaml
 >       verbs: ["*"]
 > ```
 
+Apply the role via kubectl:
+
+```bash
+kubectl apply -f project-role.yaml
+```
 
 **Project Policy**
 
@@ -185,7 +190,8 @@ project-policy.yaml
 >     name: student001
 > ```
 
-When a Project Policy is created, Kommander creates a Kubernetes FederatedRoleBinding on the Kubernetes cluster where Kommander is running. Run the following command to create the policy using kubectl:  
+When a Project Policy is created, Kommander creates a Kubernetes FederatedRoleBinding on the Kubernetes cluster where Kommander is running. Run the following command to create the policy using kubectl: 
+ 
 ```bash
 kubectl apply -f project-policy.yaml
 ```
