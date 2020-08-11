@@ -53,6 +53,14 @@ To configure kubectl to access the Kubernetes cluster, obtain a token from the w
 
 When the token expires, it is necessary to repeat the above process to obtain a fresh token. When refreshing a token, only the kubectl config set-credentials command needs to be executed with the new token.
 
+**Configuring environment variables**
+
+These environment variables will be used in the labs today.
+
+```bash
+export STUDENT=student001
+export WORKSPACENS=$(kubectl get ws $student | awk {'print $3'} | grep student | sed 's/[",]//g')
+```
 
 **Using kubectl**
 
@@ -68,16 +76,6 @@ kubectl config set-context --current --namespace=WORKSPACENS
 kubectl get pods
 ```
 
-**Configuring environment variables**
 
-These environment variables will be used in the labs today.
-
-```bash
-export STUDENT=student0##
-export WORKSPACENS=$(kubectl get ws $student | awk {'print $3'} | grep student | sed 's/[",]//g')
-export VIRTUALGROUP=$(kubectl -n kommander get virtualgroup.kommander.mesosphere.io -o jsonpath='{.items[?(@.metadata.generateName=="user1-")].metadata.name}')
-export PROJECTROLE=$(kubectl -n ${projectns} get projectroles.workspaces.kommander.mesosphere.io -o jsonpath='{.items[?(@.metadata.generateName=="admin-")].metadata.name}')
-export PROJECTNS=$(STUDENT)
-```
 ---  
 [Continue to the Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
