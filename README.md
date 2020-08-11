@@ -6,15 +6,17 @@
 [3. Multitenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
-Please go to the Google Drive share and put your name in the Student_Data sheet next to a student number.  This will be your student number and password you will use for today's workshop.  
 
-[Google Drive Share](https://drive.google.com/drive/folders/1V9nU9IFZuLEvIZsz-pg5xH0RNUJhKXBK?usp=sharing)
 
 ## Introduction
 
 During this workshop, you will learn through the use of customer resource definitions, controllers and APIs how to manage and operate Kubernetes at scale.
 
 ## Prerequisites
+
+Please go to the Google Drive share and put your name in the Student_Data sheet next to a student number.  This will be your student number and password you will use for today's workshop.  
+
+[Google Drive Share - Contains student data sheet and yaml packages for today's labs.](https://drive.google.com/drive/folders/1V9nU9IFZuLEvIZsz-pg5xH0RNUJhKXBK?usp=sharing)
 
 You need either a Linux, MacOS or a Windows client with the kubernetes command line installed and an internet browser.
 
