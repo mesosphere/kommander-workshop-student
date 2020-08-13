@@ -211,7 +211,7 @@ The kubeconfig to access the new cluster is stored in a secret and can be downlo
 Test the connection to the newly deployed cluster.  You must specify the location of the downloaded kubeconfig file.
 
 ```bash
-kubectl get nodes --kubeconfig student001.kubeconfig
+kubectl get nodes --kubeconfig student001-kubeconfig
 ```
 
 >```bash
