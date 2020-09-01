@@ -1,9 +1,9 @@
 # Managing Kubernetes at Scale
 
 [Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction)  
-[1. Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
-[2. Multi-cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
-[3. Multitenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
+[1. Multi-Cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
+[2. Multi-Cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
+[3. Multi-Tenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
 
@@ -23,7 +23,7 @@ You need either a Linux, MacOS or a Windows client with the kubernetes command l
 **Install and Set Up kubectl**
 The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.
 
-[kubectl installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+[kubectl Installation](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 **Install kubectl on Linux**
 
@@ -94,4 +94,4 @@ You should recieve an output that says:
 > ```
 
 ---  
-[Continue to the Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
+[Continue to the Multi-Cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
