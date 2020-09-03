@@ -1,13 +1,13 @@
 # Managing Kubernetes at Scale
 
 [Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction)  
-[1. Multi-Cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
-[2. Multi-cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
-[3. Multitenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
+[1. Multi-Cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-Cloud-lab)  
+[2. Multi-Cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
+[3. Multi-Tenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
 
-## Multi-cloud-lab
+## Multi-Cloud-lab
 
 Infrastructure providers like AWS, Azure, and Google provide the infrastructure for your Konvoy clusters. To automate their provisioning, Kommander needs authentication keys for your preferred infrastructure provider. You may have many accounts for a single infrastructure provider.
 
@@ -80,4 +80,4 @@ Infrastructure Provider credentials are configured in each workspace, so you mus
 
 --- 
 [<- Return to the Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction) -- 
-[Continue to the Multi-cluster lab ->](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)
+[Continue to the Multi-Cluster lab ->](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)
