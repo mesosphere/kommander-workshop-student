@@ -7,7 +7,7 @@
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
 
-## Multi-Cluster-
+## Multi-Cluster-Lab
 
 Kommander provides management and insights for multiple Kubernetes clusters, and supports both Konvoy or non-Konvoy clusters. Kommander includes essential enterprise-grade capabilities such as:
 
