@@ -257,16 +257,17 @@ Since a project Platform Service is simply a Kubernetes FederatedAddon, it can a
 kubectl create -f project-platform-services.yaml
 ```
 
-**Validate Jenkins Deployment**
-```
-echo https://$(kubectl --kubeconfig <studentXXX-kubeconfig.yaml> get svc traefik-kubeaddons -n kubeaddons -ojsonpath={.status.loadBalancer.ingress[*].hostname})/jenkins
-```
-
 **Validate the Project Configuration**
 
 To validate the project configuration, from the projects menu, click the project in the list.  This will take you into the project summary which will contain the platform services, clusters, roles, policies, configmaps, secrets, and quotas.
 
-![Kommander Dashboard - Proejcts!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/project-complete.png)
+![Kommander Dashboard - Projects!](https://github.com/mesosphere/kommander-workshop-student/blob/master/images/project-complete.png)
+ 
+ 
+**Validate Jenkins Deployment**
+```
+echo https://$(kubectl --kubeconfig <studentXXX-kubeconfig.yaml> get svc traefik-kubeaddons -n kubeaddons -ojsonpath={.status.loadBalancer.ingress[*].hostname})/jenkins
+``` 
  
 ---  
 [<- Reuturn to the Multi-cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab) -- 
