@@ -1,13 +1,13 @@
 # Managing Kubernetes at Scale
 
 [Introduction](https://github.com/mesosphere/kommander-workshop-student/blob/master/README.md#introduction)  
-[1. Multi-cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-cloud-lab)  
-[2. Multi-cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
-[3. Multitenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multitenancy-Lab)  
+[1. Multi-Cloud lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cloud-lab.md#Multi-Cloud-lab)  
+[2. Multi-Cluster lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multi-cluster-lab.md#Multi-Cluster-Lab)  
+[3. Multi-Tenancy lab](https://github.com/mesosphere/kommander-workshop-student/blob/master/multitenancy-lab.md#Multi-Tenancy-Lab)  
 [4. Summary](https://github.com/mesosphere/kommander-workshop-student/blob/master/summary.md#Summary)  
 ---
 
-## Multitenancy-Lab
+## Multi-Tenancy-Lab
 
 ![Kommander architecture!](https://docs.d2iq.com/ksphere/kommander/1.1/img/Kommander_architecture.png "Kommander_architecture")  
 
@@ -256,7 +256,13 @@ Since a project Platform Service is simply a Kubernetes FederatedAddon, it can a
 ```bash
 kubectl create -f project-platform-services.yaml
 ```
-**Validate the project configuration**
+
+**Validate Jenkins Deployment**
+```
+echo https://$(kubectl --kubeconfig <studentXXX-kubeconfig.yaml> get svc traefik-kubeaddons -n kubeaddons -ojsonpath={.status.loadBalancer.ingress[*].hostname})/jenkins
+```
+
+**Validate the Project Configuration**
 
 To validate the project configuration, from the projects menu, click the project in the list.  This will take you into the project summary which will contain the platform services, clusters, roles, policies, configmaps, secrets, and quotas.
 
