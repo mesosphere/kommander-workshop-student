@@ -65,7 +65,8 @@ Once you have signed in, a page will show the commands required to configure kub
 
 When the token expires, it is necessary to repeat the above process to obtain a fresh token. When refreshing a token, only the kubectl config set-credentials command needs to be executed with the new token.
 
-
+## Reconnect to the Kommander Dashboard
+Kommander Dashboard https://kommander.k8s-workshops.comops/portal/kommander/ui/#/
 
 
 
