@@ -16,7 +16,7 @@ During this workshop, you will learn through the use of customer resource defini
 
 Please go to the Google Drive links below and put your name in the Student Sign Up Sheet sheet next to a student number.  This will be your student number for your lab today.  
 
-[Google Drive Share - Contains Student Sign Up Sheet.](https://docs.google.com/spreadsheets/d/1fw2VjKo67SOcO5nvjAwhTpgH8rKX7xKMQF11V-twK60/edit?usp=sharing)
+[Google Drive Share - Contains Student Sign Up Sheet](https://docs.google.com/spreadsheets/d/1fw2VjKo67SOcO5nvjAwhTpgH8rKX7xKMQF11V-twK60/edit?usp=sharing)
 
 [Google Drive Share - Contains Student Labs](https://drive.google.com/drive/folders/1Uq6NuWlVomDGX41DjV8Wcda0JRZikQSF?usp=sharing)
 
