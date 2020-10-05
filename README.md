@@ -14,9 +14,12 @@ During this workshop, you will learn through the use of customer resource defini
 
 ## Prerequisites
 
-Please go to the Google Drive share and put your name in the Student_Data sheet next to a student number.  This will be your student number and password you will use for today's workshop.  
+Please go to the Google Drive links below and put your name in the Student Sign Up Sheet sheet next to a student number.  This will be your student number for your lab today.  
 
-[Google Drive Share - Contains student data sheet and yaml packages for today's labs.](https://drive.google.com/drive/folders/1V9nU9IFZuLEvIZsz-pg5xH0RNUJhKXBK?usp=sharing)
+[Google Drive Share - Contains Student Sign Up Sheet.](https://docs.google.com/spreadsheets/d/1fw2VjKo67SOcO5nvjAwhTpgH8rKX7xKMQF11V-twK60/edit?usp=sharing)
+
+[Google Drive Share - Contains Student Labs](https://drive.google.com/drive/folders/1Uq6NuWlVomDGX41DjV8Wcda0JRZikQSF?usp=sharing)
+
 
 You need either a Linux, MacOS or a Windows client with the kubernetes command line installed and an internet browser.
 
