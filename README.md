@@ -47,7 +47,7 @@ kubectl version --client
 
 **Connect to the Kommander dashboard**
 
-[Kommander Dashboard https://kommander.k8s-workshops.comops/portal/kommander/ui/#/](https://kommander.k8s-workshops.com/ops/portal/kommander/ui/#/)
+[Kommander Dashboard https://kommander.k8s-workshops.com/ops/portal/kommander/ui/#/](https://kommander.k8s-workshops.com/ops/portal/kommander/ui/#/)
 
 Login with your provided credentials:
 
