@@ -19,6 +19,7 @@ Please go to the Google Drive links below and put your name in the Student Sign 
 [Google Drive Share - Contains Student Sign Up Sheet](https://docs.google.com/spreadsheets/d/1fw2VjKo67SOcO5nvjAwhTpgH8rKX7xKMQF11V-twK60/edit?usp=sharing)
 
 [Google Drive Share - Contains Student Labs](https://drive.google.com/drive/folders/1Uq6NuWlVomDGX41DjV8Wcda0JRZikQSF?usp=sharing)
+
 [Static Website - Contains Student Labs](http://students.k8s-workshops.com/)
 
 
